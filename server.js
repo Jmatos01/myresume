@@ -1,5 +1,4 @@
 var port = process.env.PORT || 4000;
-var zero = 0;
 
 var express = require("express"); //lets you communicate with the back end
 var fs = require("fs");
@@ -23,7 +22,7 @@ app.use(express.json()); // this does a body parse
 // Add headers
 app.use(function(req, res, next) {
   // Website you wish to allow to connect
-  res.setHeader("Access-Control-Allow-Origin", ['http://142.93.206.136:4000']);
+  res.setHeader("Access-Control-Allow-Origin", 'http://jmatos.techlaunch.io:4000');
 
   // Request methods you wish to allow
   res.setHeader(
