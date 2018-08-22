@@ -54,7 +54,7 @@ app.post("/", function(req, res) {
   //listens to any post request
   console.log(req.body);
 
-  var emailBody = fs.readFileSync("./resume.html");
+  var emailBody = fs.readFileSync("./assets/resume.html");
 
   var mailOptions = {
     from: req.body.from,
