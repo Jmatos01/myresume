@@ -22,7 +22,7 @@ app.use(express.json()); // this does a body parse
 // Add headers
 app.use(function(req, res, next) {
   // Website you wish to allow to connect
-  res.setHeader("Access-Control-Allow-Origin", 'http://142.93.206.136:4000');
+  res.setHeader("Access-Control-Allow-Origin", ['http://142.93.206.136:4000']);
 
   // Request methods you wish to allow
   res.setHeader(
@@ -52,24 +52,7 @@ app.get("/", function(req, res) {
 
 //purpose of this is to enable cross domain requests
 // Add headers
-app.use(function (req, res, next) {
-  
-  // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', ['http://142.93.206.136:4000']);
 
-  // Request methods you wish to allow
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-
-  // Request headers you wish to allow
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type');
-
-  // Set to true if you need the website to include cookies in the requests sent
-  // to the API (e.g. in case you use sessions)
-  res.setHeader('Access-Control-Allow-Credentials', true);
-
-  // Pass to next layer of middleware
-  next();
-});
 
 app.post("/", function(req, res) {
   //listens to any post request
