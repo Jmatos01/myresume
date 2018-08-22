@@ -53,9 +53,9 @@ app.get("/", function(req, res) {
 //purpose of this is to enable cross domain requests
 // Add headers
 app.use(function (req, res, next) {
-
+  
   // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', 'http://142.93.206.136:4000');
+  res.setHeader('Access-Control-Allow-Origin', ['http://142.93.206.136:4000']);
 
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
