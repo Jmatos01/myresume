@@ -1,4 +1,5 @@
 var port = process.env.PORT || 4000;
+var zero = 0;
 
 var express = require("express"); //lets you communicate with the back end
 var fs = require("fs");
